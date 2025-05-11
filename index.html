@@ -1,0 +1,953 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FlowMaster Plumbing | Professional Plumbing Solutions</title>
+  <script src="./assets/js/tailwind.js"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: { primary: "#1E3D59", secondary: "#17A2B8" },
+          borderRadius: {
+            none: "0px",
+            sm: "4px",
+            DEFAULT: "8px",
+            md: "12px",
+            lg: "16px",
+            xl: "20px",
+            "2xl": "24px",
+            "3xl": "32px",
+            full: "9999px",
+            button: "8px",
+          },
+        },
+      },
+    };
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Open+Sans:wght@400;500;600&family=Pacifico&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css" />
+  <style>
+    :where([class^="ri-"])::before {
+      content: "\f3c2";
+    }
+
+    .filter-btn {
+      color: #666;
+    }
+
+    .filter-btn.active {
+      background-color: #1e3d59;
+      color: white;
+    }
+
+    .gallery-item {
+      transition: all 0.4s ease-in-out;
+      position: relative;
+      opacity: 1;
+      transform: scale(1);
+    }
+
+    .gallery-item.hide {
+      opacity: 0;
+      transform: scale(0.8);
+      position: absolute;
+      pointer-events: none;
+    }
+
+    #gallery .grid {
+      position: relative;
+      min-height: 500px;
+    }
+
+    body {
+      font-family: "Open Sans", sans-serif;
+      color: #333;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      font-family: "Montserrat", sans-serif;
+    }
+
+    input[type="number"]::-webkit-inner-spin-button,
+    input[type="number"]::-webkit-outer-spin-button {
+      -webkit-appearance: none;
+      margin: 0;
+    }
+
+    .service-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    }
+
+    .hero-section {
+      background-image: linear-gradient(to right, rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.2), transparent), url("./assets/images/hero-page-background.jpg");
+      background-position: right center;
+      background-repeat: no-repeat;
+      background-size: contain;
+    }
+
+    html {
+      scroll-padding-top: 20px;
+    }
+
+    section {
+      scroll-margin-top: 20px;
+    }
+  </style>
+</head>
+
+<body class="bg-white">
+  <!-- Header Section -->
+  <header class="w-full bg-white shadow-sm fixed top-0 left-0 z-50 h-20">
+    <div class="container mx-auto px-6 h-full flex items-center justify-between">
+      <a href="#" class="text-primary font-['Pacifico'] text-3xl">logo</a>
+      <nav class="hidden md:flex items-center space-x-8">
+        <a href="service.html" class="text-gray-700 hover:text-primary font-medium transition-colors">Services</a>
+        <a href="#gallery" class="text-gray-700 hover:text-primary font-medium transition-colors">Gallery</a>
+        <a href="about.html" class="text-gray-700 hover:text-primary font-medium transition-colors">About</a>
+        <a href="#contact" class="text-gray-700 hover:text-primary font-medium transition-colors">Contact</a>
+        <a href="./bookservice.html"
+          class="bg-primary text-white px-6 py-2.5 !rounded-button font-medium hover:bg-opacity-90 transition-colors whitespace-nowrap">
+          Book Service
+        </a>
+      </nav>
+      <button class="md:hidden w-10 h-10 flex items-center justify-center text-gray-700">
+        <i class="ri-menu-line ri-lg"></i>
+      </button>
+    </div>
+  </header>
+  <!-- Hero Section -->
+  <section class="hero-section w-full min-h-[700px] pt-36 pb-16">
+    <div class="container mx-auto px-6 w-full">
+      <div class="max-w-xl">
+        <h1 class="text-5xl md:text-6xl font-bold text-primary leading-tight mb-4">
+          Professional Plumbing Solutions
+        </h1>
+        <p class="text-lg text-gray-700 mb-8">
+          Expert plumbing services for residential and commercial properties.
+          Available 24/7 for all your plumbing needs.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4">
+          <button
+            class="bg-primary text-white px-8 py-3.5 !rounded-button font-medium hover:bg-opacity-90 transition-colors whitespace-nowrap">
+            Get Free Quote
+          </button>
+          <div class="flex items-center">
+            <div class="w-12 h-12 bg-secondary rounded-full flex items-center justify-center mr-4">
+              <i class="ri-phone-fill ri-lg text-white"></i>
+            </div>
+            <div>
+              <p class="text-sm text-gray-600">Emergency Service</p>
+              <p class="text-lg font-bold text-primary">(555) 123-4567</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Services Grid -->
+  <section id="services" class="py-16 bg-gray-50">
+    <div class="container mx-auto px-6">
+      <div class="text-center mb-12">
+        <h2 class="text-3xl md:text-4xl font-bold text-primary mb-4">
+          Our Services
+        </h2>
+        <p class="text-gray-600 max-w-2xl mx-auto">
+          We provide comprehensive plumbing solutions to meet all your
+          residential and commercial needs.
+        </p>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- Service Card 1 -->
+        <div class="service-card bg-white p-8 rounded shadow-md transition-all duration-300">
+          <div class="w-16 h-16 bg-primary bg-opacity-10 rounded-full flex items-center justify-center mb-6">
+            <i class="ri-drop-line ri-2x text-primary"></i>
+          </div>
+          <h3 class="text-xl font-bold text-gray-800 mb-3">
+            Leak Detection & Repair
+          </h3>
+          <p class="text-gray-600 mb-4">
+            Advanced technology to detect hidden leaks and provide efficient
+            repairs to prevent water damage.
+          </p>
+          <a href="service.html" class="text-secondary font-medium flex items-center">
+            Learn More
+            <i class="ri-arrow-right-line ml-2"></i>
+          </a>
+        </div>
+        <!-- Service Card 2 -->
+        <div class="service-card bg-white p-8 rounded shadow-md transition-all duration-300">
+          <div class="w-16 h-16 bg-primary bg-opacity-10 rounded-full flex items-center justify-center mb-6">
+            <i class="ri-tools-line ri-2x text-primary"></i>
+          </div>
+          <h3 class="text-xl font-bold text-gray-800 mb-3">Drain Cleaning</h3>
+          <p class="text-gray-600 mb-4">
+            Professional drain cleaning services to remove clogs and ensure
+            proper water flow in your plumbing system.
+          </p>
+          <a href="service.html" class="text-secondary font-medium flex items-center">
+            Learn More
+            <i class="ri-arrow-right-line ml-2"></i>
+          </a>
+        </div>
+        <!-- Service Card 3 -->
+        <div class="service-card bg-white p-8 rounded shadow-md transition-all duration-300">
+          <div class="w-16 h-16 bg-primary bg-opacity-10 rounded-full flex items-center justify-center mb-6">
+            <i class="ri-home-gear-line ri-2x text-primary"></i>
+          </div>
+          <h3 class="text-xl font-bold text-gray-800 mb-3">
+            Water Heater Services
+          </h3>
+          <p class="text-gray-600 mb-4">
+            Installation, repair, and maintenance of water heaters to ensure
+            efficient and reliable hot water supply.
+          </p>
+          <a href="service.html" class="text-secondary font-medium flex items-center">
+            Learn More
+            <i class="ri-arrow-right-line ml-2"></i>
+          </a>
+        </div>
+        <!-- Service Card 4 -->
+        <div class="service-card bg-white p-8 rounded shadow-md transition-all duration-300">
+          <div class="w-16 h-16 bg-primary bg-opacity-10 rounded-full flex items-center justify-center mb-6">
+            <i class="ri-install-line ri-2x text-primary"></i>
+          </div>
+          <h3 class="text-xl font-bold text-gray-800 mb-3">
+            Fixture Installation
+          </h3>
+          <p class="text-gray-600 mb-4">
+            Expert installation of sinks, faucets, toilets, showers, and other
+            plumbing fixtures for your home or business.
+          </p>
+          <a href="service.html" class="text-secondary font-medium flex items-center">
+            Learn More
+            <i class="ri-arrow-right-line ml-2"></i>
+          </a>
+        </div>
+        <!-- Service Card 5 -->
+        <div class="service-card bg-white p-8 rounded shadow-md transition-all duration-300">
+          <div class="w-16 h-16 bg-primary bg-opacity-10 rounded-full flex items-center justify-center mb-6">
+            <i class="ri-pipe-line ri-2x text-primary"></i>
+          </div>
+          <h3 class="text-xl font-bold text-gray-800 mb-3">
+            Pipe Repair & Replacement
+          </h3>
+          <p class="text-gray-600 mb-4">
+            Comprehensive pipe services including repair, replacement, and
+            installation using the latest techniques.
+          </p>
+          <a href="service.html" class="text-secondary font-medium flex items-center">
+            Learn More
+            <i class="ri-arrow-right-line ml-2"></i>
+          </a>
+        </div>
+        <!-- Service Card 6 -->
+        <div class="service-card bg-white p-8 rounded shadow-md transition-all duration-300">
+          <div class="w-16 h-16 bg-primary bg-opacity-10 rounded-full flex items-center justify-center mb-6">
+            <i class="ri-24-hours-line ri-2x text-primary"></i>
+          </div>
+          <h3 class="text-xl font-bold text-gray-800 mb-3">
+            Emergency Services
+          </h3>
+          <p class="text-gray-600 mb-4">
+            24/7 emergency plumbing services to address urgent issues and
+            prevent further damage to your property.
+          </p>
+          <a href="service.html" class="text-secondary font-medium flex items-center">
+            Learn More
+            <i class="ri-arrow-right-line ml-2"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- CTA Section -->
+  <section class="py-16 bg-primary text-white">
+    <div class="container mx-auto px-6 text-center">
+      <h2 class="text-3xl font-bold mb-4">Need Professional Plumbing Services?</h2>
+      <p class="text-lg mb-8 max-w-2xl mx-auto">
+        Book your service today and experience the difference with FlowMaster Plumbing. 
+        Our expert team is ready to handle all your plumbing needs with care and precision.
+      </p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a href="bookservice.html" class="bg-white text-primary px-8 py-3 !rounded-button font-medium hover:bg-opacity-90 transition-colors">
+          Book Service Now
+        </a>
+        <a href="#contact" class="border-2 border-white text-white px-8 py-3 !rounded-button font-medium hover:bg-white hover:text-primary transition-colors">
+          Contact Us
+        </a>
+      </div>
+    </div>
+  </section>
+  <!-- Why Choose Us -->
+  <section id="about" class="py-16 bg-white">
+    <div class="container mx-auto px-6">
+      <div class="text-center mb-12">
+        <h2 class="text-3xl md:text-4xl font-bold text-primary mb-4">
+          Why Choose Us
+        </h2>
+        <p class="text-gray-600 max-w-2xl mx-auto">
+          Our commitment to quality, reliability, and customer satisfaction
+          sets us apart from the competition.
+        </p>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <!-- Benefit 1 -->
+        <div class="text-center p-6">
+          <div class="w-20 h-20 bg-primary bg-opacity-10 rounded-full flex items-center justify-center mx-auto mb-6">
+            <i class="ri-medal-line ri-2x text-primary"></i>
+          </div>
+          <h3 class="text-xl font-bold text-gray-800 mb-3">
+            Licensed & Insured
+          </h3>
+          <p class="text-gray-600">
+            Our team consists of fully licensed and insured professionals with
+            extensive training and experience.
+          </p>
+        </div>
+        <!-- Benefit 2 -->
+        <div class="text-center p-6">
+          <div class="w-20 h-20 bg-primary bg-opacity-10 rounded-full flex items-center justify-center mx-auto mb-6">
+            <i class="ri-timer-line ri-2x text-primary"></i>
+          </div>
+          <h3 class="text-xl font-bold text-gray-800 mb-3">
+            Fast Response Time
+          </h3>
+          <p class="text-gray-600">
+            We pride ourselves on our quick response times, ensuring your
+            plumbing issues are addressed promptly.
+          </p>
+        </div>
+        <!-- Benefit 3 -->
+        <div class="text-center p-6">
+          <div class="w-20 h-20 bg-primary bg-opacity-10 rounded-full flex items-center justify-center mx-auto mb-6">
+            <i class="ri-price-tag-3-line ri-2x text-primary"></i>
+          </div>
+          <h3 class="text-xl font-bold text-gray-800 mb-3">
+            Transparent Pricing
+          </h3>
+          <p class="text-gray-600">
+            Clear, upfront pricing with no hidden fees. We provide detailed
+            estimates before beginning any work.
+          </p>
+        </div>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mt-12">
+        <!-- Stat 1 -->
+        <div class="text-center p-6 bg-gray-50 rounded">
+          <h3 class="text-4xl font-bold text-primary mb-2">15+</h3>
+          <p class="text-gray-600">Years Experience</p>
+        </div>
+        <!-- Stat 2 -->
+        <div class="text-center p-6 bg-gray-50 rounded">
+          <h3 class="text-4xl font-bold text-primary mb-2">5,000+</h3>
+          <p class="text-gray-600">Satisfied Customers</p>
+        </div>
+        <!-- Stat 3 -->
+        <div class="text-center p-6 bg-gray-50 rounded">
+          <h3 class="text-4xl font-bold text-primary mb-2">24/7</h3>
+          <p class="text-gray-600">Emergency Service</p>
+        </div>
+        <!-- Stat 4 -->
+        <div class="text-center p-6 bg-gray-50 rounded">
+          <h3 class="text-4xl font-bold text-primary mb-2">100%</h3>
+          <p class="text-gray-600">Satisfaction Guarantee</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Gallery Section -->
+  <section id="gallery" class="py-16 bg-white">
+    <div class="container mx-auto px-6">
+      <div class="text-center mb-12">
+        <h2 class="text-3xl md:text-4xl font-bold text-primary mb-4">
+          Our Work Gallery
+        </h2>
+        <p class="text-gray-600 max-w-2xl mx-auto">
+          Take a look at some of our recent plumbing projects and
+          installations.
+        </p>
+      </div>
+      <div class="flex justify-center mb-8">
+        <div class="inline-flex bg-gray-100 p-1 rounded-full">
+          <button class="filter-btn active px-6 py-2 rounded-full text-sm font-medium transition-all"
+            data-category="all">
+            All Works
+          </button>
+          <button class="filter-btn px-6 py-2 rounded-full text-sm font-medium transition-all" data-category="bathroom">
+            Bathroom
+          </button>
+          <button class="filter-btn px-6 py-2 rounded-full text-sm font-medium transition-all" data-category="kitchen">
+            Kitchen
+          </button>
+          <button class="filter-btn px-6 py-2 rounded-full text-sm font-medium transition-all"
+            data-category="emergency">
+            Emergency
+          </button>
+          <button class="filter-btn px-6 py-2 rounded-full text-sm font-medium transition-all"
+            data-category="installation">
+            Installation
+          </button>
+        </div>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- Gallery Item 1 -->
+        <div class="group relative overflow-hidden rounded-lg shadow-md cursor-pointer gallery-item"
+          data-category="bathroom">
+          <img
+            src="./assets/images/gallery/bathroom-renovation.jpg"
+            alt="Bathroom Renovation"
+            class="w-full h-[300px] object-cover transition-transform duration-300 group-hover:scale-105" />
+          <div
+            class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+            <div class="absolute bottom-0 left-0 right-0 p-6">
+              <h3 class="text-white text-xl font-bold mb-2">
+                Luxury Bathroom Renovation
+              </h3>
+              <p class="text-gray-200">
+                Complete bathroom remodel with modern fixtures and efficient
+                plumbing system.
+              </p>
+            </div>
+          </div>
+        </div>
+        <!-- Gallery Item 2 -->
+        <div class="group relative overflow-hidden rounded-lg shadow-md cursor-pointer gallery-item"
+          data-category="kitchen">
+          <img
+            src="./assets/images/gallery/commercial-kitchen.jpg"
+            alt="Commercial Kitchen"
+            class="w-full h-[300px] object-cover transition-transform duration-300 group-hover:scale-105" />
+          <div
+            class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+            <div class="absolute bottom-0 left-0 right-0 p-6">
+              <h3 class="text-white text-xl font-bold mb-2">
+                Commercial Kitchen Installation
+              </h3>
+              <p class="text-gray-200">
+                Professional-grade plumbing setup for a restaurant kitchen.
+              </p>
+            </div>
+          </div>
+        </div>
+        <!-- Gallery Item 3 -->
+        <div class="group relative overflow-hidden rounded-lg shadow-md cursor-pointer gallery-item"
+          data-category="installation">
+          <img
+            src="./assets/images/gallery/water-heater-installation.jpg"
+            alt="Water Heater Installation"
+            class="w-full h-[300px] object-cover transition-transform duration-300 group-hover:scale-105" />
+          <div
+            class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+            <div class="absolute bottom-0 left-0 right-0 p-6">
+              <h3 class="text-white text-xl font-bold mb-2">
+                Water Heater Installation
+              </h3>
+              <p class="text-gray-200">
+                Energy-efficient water heater setup with modern safety
+                features.
+              </p>
+            </div>
+          </div>
+        </div>
+        <!-- Gallery Item 4 -->
+        <div class="group relative overflow-hidden rounded-lg shadow-md cursor-pointer gallery-item"
+          data-category="emergency">
+          <img
+            src="./assets/images/gallery/drainage-system.jpg"
+            alt="Drainage System"
+            class="w-full h-[300px] object-cover transition-transform duration-300 group-hover:scale-105" />
+          <div
+            class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+            <div class="absolute bottom-0 left-0 right-0 p-6">
+              <h3 class="text-white text-xl font-bold mb-2">
+                Drainage System Installation
+              </h3>
+              <p class="text-gray-200">
+                Professional outdoor drainage solution with landscape
+                integration.
+              </p>
+            </div>
+          </div>
+        </div>
+        <!-- Gallery Item 5 -->
+        <div class="group relative overflow-hidden rounded-lg shadow-md cursor-pointer gallery-item"
+          data-category="installation">
+          <img
+            src="./assets/images/gallery/laundry-room-setup.jpg"
+            alt="Laundry Room Setup"
+            class="w-full h-[300px] object-cover transition-transform duration-300 group-hover:scale-105" />
+          <div
+            class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+            <div class="absolute bottom-0 left-0 right-0 p-6">
+              <h3 class="text-white text-xl font-bold mb-2">
+                Laundry Room Setup
+              </h3>
+              <p class="text-gray-200">
+                Professional laundry room plumbing with efficient connections.
+              </p>
+            </div>
+          </div>
+        </div>
+        <!-- Gallery Item 6 -->
+        <div class="group relative overflow-hidden rounded-lg shadow-md cursor-pointer gallery-item"
+          data-category="kitchen">
+          <img
+            src="./assets/images/gallery/kitchen-sink-installation.jpg"
+            alt="Kitchen Sink Installation"
+            class="w-full h-[300px] object-cover transition-transform duration-300 group-hover:scale-105" />
+          <div
+            class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+            <div class="absolute bottom-0 left-0 right-0 p-6">
+              <h3 class="text-white text-xl font-bold mb-2">
+                Designer Kitchen Installation
+              </h3>
+              <p class="text-gray-200">
+                High-end kitchen sink and faucet installation with premium
+                fixtures.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Contact Section -->
+  <section id="contact" class="py-16 bg-gray-50">
+    <div class="container mx-auto px-6">
+      <div class="text-center mb-12">
+        <h2 class="text-3xl md:text-4xl font-bold text-primary mb-4">
+          Contact Us
+        </h2>
+        <p class="text-gray-600 max-w-2xl mx-auto">
+          Get in touch with our team for professional plumbing services or to
+          request a free quote.
+        </p>
+      </div>
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+        <!-- Contact Form -->
+        <div class="bg-white p-8 rounded shadow-md">
+          <h3 class="text-2xl font-bold text-gray-800 mb-6">
+            Send Us a Message
+          </h3>
+          <form>
+            <div class="mb-6">
+              <label for="name" class="block text-gray-700 mb-2">Full Name</label>
+              <input type="text" id="name"
+                class="w-full px-4 py-3 border border-gray-300 rounded focus:outline-none focus:border-primary"
+                placeholder="John Smith" />
+            </div>
+            <div class="mb-6">
+              <label for="email" class="block text-gray-700 mb-2">Email Address</label>
+              <input type="email" id="email"
+                class="w-full px-4 py-3 border border-gray-300 rounded focus:outline-none focus:border-primary"
+                placeholder="john@example.com" />
+            </div>
+            <div class="mb-6">
+              <label for="phone" class="block text-gray-700 mb-2">Phone Number</label>
+              <input type="tel" id="phone"
+                class="w-full px-4 py-3 border border-gray-300 rounded focus:outline-none focus:border-primary"
+                placeholder="(555) 123-4567" />
+            </div>
+            <div class="mb-6">
+              <label for="service" class="block text-gray-700 mb-2">Service Needed</label>
+              <div class="relative">
+                <select id="service"
+                  class="w-full px-4 py-3 border border-gray-300 rounded focus:outline-none focus:border-primary appearance-none pr-8">
+                  <option value="" selected disabled>Select a service</option>
+                  <option value="leak">Leak Detection & Repair</option>
+                  <option value="drain">Drain Cleaning</option>
+                  <option value="water-heater">Water Heater Services</option>
+                  <option value="fixture">Fixture Installation</option>
+                  <option value="pipe">Pipe Repair & Replacement</option>
+                  <option value="emergency">Emergency Services</option>
+                </select>
+                <div class="absolute inset-y-0 right-0 flex items-center px-2 pointer-events-none">
+                  <i class="ri-arrow-down-s-line text-gray-500"></i>
+                </div>
+              </div>
+            </div>
+            <div class="mb-6">
+              <label for="message" class="block text-gray-700 mb-2">Message</label>
+              <textarea id="message" rows="4"
+                class="w-full px-4 py-3 border border-gray-300 rounded focus:outline-none focus:border-primary"
+                placeholder="Please describe your plumbing issue..."></textarea>
+            </div>
+            <button type="submit"
+              class="w-full bg-primary text-white px-6 py-3.5 !rounded-button font-medium hover:bg-opacity-90 transition-colors whitespace-nowrap">
+              Submit Request
+            </button>
+          </form>
+        </div>
+        <!-- Contact Info & Map -->
+        <div>
+          <div class="bg-white p-8 rounded shadow-md mb-8">
+            <h3 class="text-2xl font-bold text-gray-800 mb-6">
+              Business Hours & Contact
+            </h3>
+            <div class="mb-6">
+              <h4 class="text-lg font-semibold text-gray-700 mb-3">
+                Business Hours
+              </h4>
+              <ul class="space-y-2">
+                <li class="flex justify-between">
+                  <span class="text-gray-600">Monday - Friday</span>
+                  <span class="font-medium">7:00 AM - 7:00 PM</span>
+                </li>
+                <li class="flex justify-between">
+                  <span class="text-gray-600">Saturday</span>
+                  <span class="font-medium">8:00 AM - 5:00 PM</span>
+                </li>
+                <li class="flex justify-between">
+                  <span class="text-gray-600">Sunday</span>
+                  <span class="font-medium">Emergency Service Only</span>
+                </li>
+              </ul>
+            </div>
+            <div class="mb-6">
+              <h4 class="text-lg font-semibold text-gray-700 mb-3">
+                Contact Information
+              </h4>
+              <ul class="space-y-3">
+                <li class="flex items-start">
+                  <div class="w-6 h-6 flex items-center justify-center mr-3 mt-1">
+                    <i class="ri-map-pin-line text-primary"></i>
+                  </div>
+                  <span class="text-gray-600">1234 Plumbing Way, Watertown, CA 90210</span>
+                </li>
+                <li class="flex items-center">
+                  <div class="w-6 h-6 flex items-center justify-center mr-3">
+                    <i class="ri-phone-line text-primary"></i>
+                  </div>
+                  <span class="text-gray-600">(555) 123-4567</span>
+                </li>
+                <li class="flex items-center">
+                  <div class="w-6 h-6 flex items-center justify-center mr-3">
+                    <i class="ri-mail-line text-primary"></i>
+                  </div>
+                  <span class="text-gray-600">info@flowmasterplumbing.com</span>
+                </li>
+              </ul>
+            </div>
+            <div>
+              <h4 class="text-lg font-semibold text-gray-700 mb-3">
+                Emergency Service
+              </h4>
+              <p class="text-gray-600 mb-2">
+                Available 24/7 for urgent plumbing issues
+              </p>
+              <p class="text-xl font-bold text-primary">(555) 911-PIPE</p>
+            </div>
+          </div>
+          <!-- Map -->
+          <div class="bg-white p-8 rounded shadow-md h-[300px] relative overflow-hidden">
+            <div class="absolute inset-0 bg-cover bg-center" style="
+                  background-image: url('https://public.readdy.ai/gen_page/map_placeholder_1280x720.png');
+                "></div>
+          </div>
+        </div>
+      </div>
+      <!-- Testimonials -->
+      <div class="mt-16">
+        <h3 class="text-2xl font-bold text-gray-800 mb-8 text-center">
+          What Our Customers Say
+        </h3>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <!-- Testimonial 1 -->
+          <div class="bg-white p-6 rounded shadow-md">
+            <div class="flex text-secondary mb-4">
+              <i class="ri-star-fill"></i>
+              <i class="ri-star-fill"></i>
+              <i class="ri-star-fill"></i>
+              <i class="ri-star-fill"></i>
+              <i class="ri-star-fill"></i>
+            </div>
+            <p class="text-gray-600 mb-4">
+              "FlowMaster Plumbing responded quickly to our emergency call and
+              fixed our burst pipe in no time. Professional, courteous, and
+              efficient service!"
+            </p>
+            <div class="flex items-center">
+              <div class="w-10 h-10 bg-primary rounded-full flex items-center justify-center text-white font-bold mr-3">
+                JS
+              </div>
+              <div>
+                <p class="font-medium">Jennifer Anderson</p>
+                <p class="text-sm text-gray-500">Residential Customer</p>
+              </div>
+            </div>
+          </div>
+          <!-- Testimonial 2 -->
+          <div class="bg-white p-6 rounded shadow-md">
+            <div class="flex text-secondary mb-4">
+              <i class="ri-star-fill"></i>
+              <i class="ri-star-fill"></i>
+              <i class="ri-star-fill"></i>
+              <i class="ri-star-fill"></i>
+              <i class="ri-star-fill"></i>
+            </div>
+            <p class="text-gray-600 mb-4">
+              "We've been using FlowMaster for all our restaurant's plumbing
+              needs for over 5 years. Their team is reliable, thorough, and
+              always provides excellent service."
+            </p>
+            <div class="flex items-center">
+              <div class="w-10 h-10 bg-primary rounded-full flex items-center justify-center text-white font-bold mr-3">
+                MB
+              </div>
+              <div>
+                <p class="font-medium">Michael Blackwell</p>
+                <p class="text-sm text-gray-500">Business Owner</p>
+              </div>
+            </div>
+          </div>
+          <!-- Testimonial 3 -->
+          <div class="bg-white p-6 rounded shadow-md">
+            <div class="flex text-secondary mb-4">
+              <i class="ri-star-fill"></i>
+              <i class="ri-star-fill"></i>
+              <i class="ri-star-fill"></i>
+              <i class="ri-star-fill"></i>
+              <i class="ri-star-fill"></i>
+            </div>
+            <p class="text-gray-600 mb-4">
+              "The team at FlowMaster completely renovated our bathroom
+              plumbing and the results are amazing. Fair pricing, quality
+              workmanship, and they cleaned up perfectly after the job."
+            </p>
+            <div class="flex items-center">
+              <div class="w-10 h-10 bg-primary rounded-full flex items-center justify-center text-white font-bold mr-3">
+                RL
+              </div>
+              <div>
+                <p class="font-medium">Rebecca Liu</p>
+                <p class="text-sm text-gray-500">Homeowner</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Footer -->
+  <footer class="bg-primary text-white py-12">
+    <div class="container mx-auto px-6">
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+        <!-- Company Info -->
+        <div>
+          <a href="#" class="text-white font-['Pacifico'] text-3xl block mb-4">logo</a>
+          <p class="text-gray-300 mb-4">
+            Professional plumbing services for residential and commercial
+            properties. Available 24/7 for all your plumbing needs.
+          </p>
+          <div class="flex space-x-4">
+            <a href="#"
+              class="w-10 h-10 bg-white bg-opacity-20 rounded-full flex items-center justify-center hover:bg-opacity-30 transition-colors">
+              <i class="ri-facebook-fill text-white"></i>
+            </a>
+            <a href="#"
+              class="w-10 h-10 bg-white bg-opacity-20 rounded-full flex items-center justify-center hover:bg-opacity-30 transition-colors">
+              <i class="ri-twitter-x-fill text-white"></i>
+            </a>
+            <a href="#"
+              class="w-10 h-10 bg-white bg-opacity-20 rounded-full flex items-center justify-center hover:bg-opacity-30 transition-colors">
+              <i class="ri-instagram-fill text-white"></i>
+            </a>
+            <a href="#"
+              class="w-10 h-10 bg-white bg-opacity-20 rounded-full flex items-center justify-center hover:bg-opacity-30 transition-colors">
+              <i class="ri-linkedin-fill text-white"></i>
+            </a>
+          </div>
+        </div>
+        <!-- Quick Links -->
+        <div>
+          <h4 class="text-xl font-bold mb-6">Quick Links</h4>
+          <ul class="space-y-3">
+            <li><a href="#" class="text-gray-300 hover:text-white transition-colors">Home</a></li>
+            <li><a href="service.html" class="text-gray-300 hover:text-white transition-colors">Services</a></li>
+            <li><a href="about.html" class="text-gray-300 hover:text-white transition-colors">About Us</a></li>
+            <li><a href="#contact" class="text-gray-300 hover:text-white transition-colors">Contact</a></li>
+            <li><a href="#" class="text-gray-300 hover:text-white transition-colors">Careers</a></li>
+            <li><a href="#" class="text-gray-300 hover:text-white transition-colors">Privacy Policy</a></li>
+          </ul>
+        </div>
+        <!-- Service Areas -->
+        <div>
+          <h4 class="text-xl font-bold mb-6">Service Areas</h4>
+          <ul class="space-y-3">
+            <li class="text-gray-300">Watertown</li>
+            <li class="text-gray-300">Riverside</li>
+            <li class="text-gray-300">Brookfield</li>
+            <li class="text-gray-300">Lakeside</li>
+            <li class="text-gray-300">Greenville</li>
+            <li class="text-gray-300">And surrounding areas</li>
+          </ul>
+        </div>
+        
+        <div>
+          <div class="mt-6">
+            <h5 class="font-semibold mb-2">We Accept</h5>
+            <div class="flex space-x-3">
+              <i class="ri-visa-fill ri-lg text-white"></i>
+              <i class="ri-mastercard-fill ri-lg text-white"></i>
+              <i class="ri-paypal-fill ri-lg text-white"></i>
+              <i class="ri-american-express-fill ri-lg text-white"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="border-t border-gray-700 mt-10 pt-6 text-center">
+        <p class="text-gray-400">
+          © 2025 FlowMaster Plumbing. All rights reserved. Licensed and
+          Insured.
+        </p>
+      </div>
+    </div>
+  </footer>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      // Gallery filter functionality
+      const filterButtons = document.querySelectorAll(".filter-btn");
+      const galleryItems = document.querySelectorAll(".gallery-item");
+      const galleryGrid = document.querySelector("#gallery .grid");
+
+      function layoutGrid() {
+        const items = Array.from(galleryItems).filter(item => !item.classList.contains('hide'));
+        const columns = window.innerWidth < 768 ? 1 : window.innerWidth < 1024 ? 2 : 3;
+        const columnHeights = Array(columns).fill(0);
+        const columnItems = Array(columns).fill().map(() => []);
+
+        items.forEach((item, index) => {
+          const shortestColumn = columnHeights.indexOf(Math.min(...columnHeights));
+          columnItems[shortestColumn].push(item);
+          columnHeights[shortestColumn] += item.offsetHeight;
+        });
+
+        columnItems.forEach((column, columnIndex) => {
+          column.forEach((item, itemIndex) => {
+            const top = column.slice(0, itemIndex).reduce((sum, i) => sum + i.offsetHeight, 0);
+            const left = (columnIndex * 100) / columns;
+            item.style.position = 'absolute';
+            item.style.top = `${top}px`;
+            item.style.left = `${left}%`;
+            item.style.width = `${100 / columns}%`;
+            item.style.padding = '0.5rem';
+            item.style.transition = 'all 0.4s ease-in-out';
+          });
+        });
+
+        galleryGrid.style.height = `${Math.max(...columnHeights)}px`;
+      }
+
+      filterButtons.forEach((button) => {
+        button.addEventListener("click", () => {
+          const category = button.getAttribute("data-category");
+          filterButtons.forEach((btn) => btn.classList.remove("active"));
+          button.classList.add("active");
+
+          galleryItems.forEach((item) => {
+            const itemCategory = item.getAttribute("data-category");
+            if (category === "all" || category === itemCategory) {
+              item.classList.remove("hide");
+            } else {
+              item.classList.add("hide");
+            }
+          });
+
+          layoutGrid();
+        });
+      });
+
+      // Initial layout
+      layoutGrid();
+
+      // Re-layout on window resize
+      let resizeTimer;
+      window.addEventListener('resize', () => {
+        clearTimeout(resizeTimer);
+        resizeTimer = setTimeout(layoutGrid, 250);
+      });
+
+      // Service card hover animation
+      const serviceCards = document.querySelectorAll(".service-card");
+      serviceCards.forEach((card) => {
+        card.addEventListener("mouseenter", function () {
+          this.classList.add("transform");
+        });
+        card.addEventListener("mouseleave", function () {
+          this.classList.remove("transform");
+        });
+      });
+
+      // Gallery image click handler
+      const galleryImages = document.querySelectorAll("#gallery .group");
+      galleryImages.forEach((item) => {
+        item.addEventListener("click", function () {
+          const imgSrc = this.querySelector("img").src;
+          const title = this.querySelector("h3").textContent;
+          const desc = this.querySelector("p").textContent;
+          const modal = document.createElement("div");
+          modal.className =
+            "fixed inset-0 z-50 flex items-center justify-center p-4 bg-black bg-opacity-80";
+          modal.innerHTML = `
+<div class="relative max-w-4xl w-full bg-white rounded-lg overflow-hidden">
+<button class="absolute top-4 right-4 text-white z-10 w-10 h-10 flex items-center justify-center bg-black bg-opacity-50 rounded-full">
+<i class="ri-close-line ri-lg"></i>
+</button>
+<img src="${imgSrc}" alt="${title}" class="w-full h-auto">
+<div class="p-6">
+<h3 class="text-2xl font-bold text-gray-800 mb-2">${title}</h3>
+<p class="text-gray-600">${desc}</p>
+</div>
+</div>
+`;
+          document.body.appendChild(modal);
+          document.body.style.overflow = "hidden";
+          modal.querySelector("button").addEventListener("click", () => {
+            document.body.removeChild(modal);
+            document.body.style.overflow = "";
+          });
+          modal.addEventListener("click", (e) => {
+            if (e.target === modal) {
+              document.body.removeChild(modal);
+              document.body.style.overflow = "";
+            }
+          });
+        });
+      });
+
+      // Handle navigation links
+      const navLinks = document.querySelectorAll('nav a');
+      
+      navLinks.forEach(link => {
+        link.addEventListener('click', function(e) {
+          // Only prevent default and handle smooth scroll for same-page links
+          if (this.getAttribute('href').startsWith('#')) {
+            e.preventDefault();
+            const targetId = this.getAttribute('href');
+            const targetSection = document.querySelector(targetId);
+            
+            if (targetSection) {
+              targetSection.scrollIntoView({ behavior: 'smooth' });
+            }
+          }
+          // For links to other pages, let the default behavior happen
+        });
+      });
+    });
+  </script>
+</body>
+
+</html>

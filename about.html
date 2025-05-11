@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About Us | FlowMaster Plumbing</title>
+  <script src="./assets/js/tailwind.js"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: { primary: "#1E3D59", secondary: "#17A2B8" },
+          borderRadius: {
+            none: "0px",
+            sm: "4px",
+            DEFAULT: "8px",
+            md: "12px",
+            lg: "16px",
+            xl: "20px",
+            "2xl": "24px",
+            "3xl": "32px",
+            full: "9999px",
+            button: "8px",
+          },
+        },
+      },
+    };
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Open+Sans:wght@400;500;600&family=Pacifico&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css" />
+  <style>
+    :where([class^="ri-"])::before {
+      content: "\f3c2";
+    }
+
+    body {
+      font-family: "Open Sans", sans-serif;
+      color: #333;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      font-family: "Montserrat", sans-serif;
+    }
+
+    html {
+      scroll-padding-top: 60px;
+    }
+
+    section {
+      scroll-margin-top: 60px;
+    }
+
+    .team-member-card {
+      transition: transform 0.3s ease;
+    }
+
+    .team-member-card:hover {
+      transform: translateY(-5px);
+    }
+  </style>
+</head>
+
+<body class="bg-white">
+  <!-- Header Section -->
+  <header class="w-full bg-white shadow-sm fixed top-0 left-0 z-50 h-20">
+    <div class="container mx-auto px-6 h-full flex items-center justify-between">
+      <a href="index.html" class="text-primary font-['Pacifico'] text-3xl">logo</a>
+      <nav class="hidden md:flex items-center space-x-8">
+        <a href="service.html" class="text-gray-700 hover:text-primary font-medium transition-colors">Services</a>
+        <a href="index.html#gallery" class="text-gray-700 hover:text-primary font-medium transition-colors">Gallery</a>
+        <a href="about.html" class="text-gray-700 hover:text-primary font-medium transition-colors">About</a>
+        <a href="index.html#contact" class="text-gray-700 hover:text-primary font-medium transition-colors">Contact</a>
+        <a href="./bookservice.html"
+          class="bg-primary text-white px-6 py-2.5 !rounded-button font-medium hover:bg-opacity-90 transition-colors whitespace-nowrap">
+          Book Service
+        </a>
+      </nav>
+      <button class="md:hidden w-10 h-10 flex items-center justify-center text-gray-700">
+        <i class="ri-menu-line ri-lg"></i>
+      </button>
+    </div>
+  </header>
+
+  <!-- About Hero Section -->
+  <section class="w-full min-h-[400px] pt-32 pb-16 bg-gray-50">
+    <div class="container mx-auto px-6">
+      <div class="max-w-3xl">
+        <h1 class="text-4xl md:text-5xl font-bold text-primary leading-tight mb-4">
+          Our Story
+        </h1>
+        <p class="text-lg text-gray-700">
+          Building trust through excellence in plumbing services since 2010. 
+          Learn about our journey, our team, and our commitment to quality.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Company History Section -->
+  <section class="py-16">
+    <div class="container mx-auto px-6">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+        <div>
+          <h2 class="text-3xl font-bold text-primary mb-6">Our Journey</h2>
+          <p class="text-gray-600 mb-4">
+            FlowMaster Plumbing was founded in 2010 with a simple mission: to provide exceptional plumbing services with integrity and expertise. What started as a small family business has grown into one of the region's most trusted plumbing companies.
+          </p>
+          <p class="text-gray-600 mb-4">
+            Over the years, we've expanded our services, invested in cutting-edge technology, and built a team of skilled professionals who share our commitment to excellence. Our growth has been driven by our dedication to customer satisfaction and our reputation for quality work.
+          </p>
+          <p class="text-gray-600">
+            Today, we serve thousands of satisfied customers across the region, handling everything from emergency repairs to complex commercial installations. Our commitment to quality and customer service remains as strong as ever.
+          </p>
+        </div>
+        <div class="relative">
+          <img src="./assets/images/about/workshop.jpg" 
+               alt="Our Workshop" 
+               class="rounded-lg shadow-lg w-full h-[400px] object-cover" />
+          <div class="absolute -bottom-6 -left-6 bg-white p-6 rounded-lg shadow-lg">
+            <div class="text-4xl font-bold text-primary mb-2">15+</div>
+            <div class="text-gray-600">Years of Excellence</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Founder Section -->
+  <section class="py-16 bg-gray-50">
+    <div class="container mx-auto px-6">
+      <div class="text-center mb-12">
+        <h2 class="text-3xl font-bold text-primary mb-4">Meet Our Founder</h2>
+        <p class="text-gray-600 max-w-2xl mx-auto">
+          The vision and leadership behind FlowMaster Plumbing's success.
+        </p>
+      </div>
+      <div class="max-w-4xl mx-auto">
+        <div class="bg-white p-8 rounded-lg shadow-md">
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+            <div class="relative">
+              <img src="./assets/images/about/founder.jpg" 
+                   alt="John Smith - Founder" 
+                   class="rounded-lg w-full h-[400px] object-cover" />
+            </div>
+            <div>
+              <h3 class="text-2xl font-bold text-gray-800 mb-2">John Smith</h3>
+              <p class="text-secondary font-medium mb-4">Founder & CEO</p>
+              <p class="text-gray-600 mb-4">
+                With over 25 years of experience in the plumbing industry, John founded FlowMaster Plumbing with a vision to revolutionize the way plumbing services are delivered. His commitment to quality and customer satisfaction has been the driving force behind our company's success.
+              </p>
+              <p class="text-gray-600 mb-4">
+                John's expertise spans all aspects of plumbing, from residential repairs to large-scale commercial installations. His leadership has helped build a team of skilled professionals who share his passion for excellence.
+              </p>
+              <div class="flex space-x-4">
+                <a href="#" class="text-primary hover:text-secondary transition-colors">
+                  <i class="ri-linkedin-fill ri-lg"></i>
+                </a>
+                <a href="#" class="text-primary hover:text-secondary transition-colors">
+                  <i class="ri-twitter-x-fill ri-lg"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Team Section -->
+  <section class="py-16">
+    <div class="container mx-auto px-6">
+      <div class="text-center mb-12">
+        <h2 class="text-3xl font-bold text-primary mb-4">Our Leadership Team</h2>
+        <p class="text-gray-600 max-w-2xl mx-auto">
+          Meet the experienced professionals who lead our company to excellence.
+        </p>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <!-- Team Member 1 -->
+        <div class="team-member-card bg-white rounded-lg shadow-md overflow-hidden">
+          <img src="./assets/images/about/sarah-johnson.jpg" 
+               alt="Sarah Johnson" 
+               class="w-full h-64 object-cover" />
+          <div class="p-6">
+            <h3 class="text-xl font-bold text-gray-800 mb-1">Sarah Johnson</h3>
+            <p class="text-secondary font-medium mb-3">Operations Manager</p>
+            <p class="text-gray-600 mb-4">
+              With 15 years of experience in plumbing operations, Sarah ensures our services run smoothly and efficiently.
+            </p>
+            <div class="flex space-x-3">
+              <a href="#" class="text-primary hover:text-secondary transition-colors">
+                <i class="ri-linkedin-fill"></i>
+              </a>
+              <a href="#" class="text-primary hover:text-secondary transition-colors">
+                <i class="ri-twitter-x-fill"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Team Member 2 -->
+        <div class="team-member-card bg-white rounded-lg shadow-md overflow-hidden">
+          <img src="./assets/images/about/michael-chen.jpg" 
+               alt="Michael Chen" 
+               class="w-full h-64 object-cover" />
+          <div class="p-6">
+            <h3 class="text-xl font-bold text-gray-800 mb-1">Michael Chen</h3>
+            <p class="text-secondary font-medium mb-3">Technical Director</p>
+            <p class="text-gray-600 mb-4">
+              Michael leads our technical team, bringing 20 years of expertise in advanced plumbing systems and solutions.
+            </p>
+            <div class="flex space-x-3">
+              <a href="#" class="text-primary hover:text-secondary transition-colors">
+                <i class="ri-linkedin-fill"></i>
+              </a>
+              <a href="#" class="text-primary hover:text-secondary transition-colors">
+                <i class="ri-twitter-x-fill"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Team Member 3 -->
+        <div class="team-member-card bg-white rounded-lg shadow-md overflow-hidden">
+          <img src="./assets/images/about/emily-rodriguez.jpg" 
+               alt="Emily Rodriguez" 
+               class="w-full h-64 object-cover" />
+          <div class="p-6">
+            <h3 class="text-xl font-bold text-gray-800 mb-1">Emily Rodriguez</h3>
+            <p class="text-secondary font-medium mb-3">Customer Service Director</p>
+            <p class="text-gray-600 mb-4">
+              Emily ensures our customers receive exceptional service and support throughout their experience with us.
+            </p>
+            <div class="flex space-x-3">
+              <a href="#" class="text-primary hover:text-secondary transition-colors">
+                <i class="ri-linkedin-fill"></i>
+              </a>
+              <a href="#" class="text-primary hover:text-secondary transition-colors">
+                <i class="ri-twitter-x-fill"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Values Section -->
+  <section class="py-16 bg-gray-50">
+    <div class="container mx-auto px-6">
+      <div class="text-center mb-12">
+        <h2 class="text-3xl font-bold text-primary mb-4">Our Core Values</h2>
+        <p class="text-gray-600 max-w-2xl mx-auto">
+          The principles that guide everything we do at FlowMaster Plumbing.
+        </p>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div class="bg-white p-6 rounded-lg shadow-md text-center">
+          <div class="w-16 h-16 bg-primary bg-opacity-10 rounded-full flex items-center justify-center mx-auto mb-4">
+            <i class="ri-heart-line ri-2x text-primary"></i>
+          </div>
+          <h3 class="text-xl font-bold text-gray-800 mb-2">Integrity</h3>
+          <p class="text-gray-600">We believe in honest, transparent communication and ethical business practices.</p>
+        </div>
+        <div class="bg-white p-6 rounded-lg shadow-md text-center">
+          <div class="w-16 h-16 bg-primary bg-opacity-10 rounded-full flex items-center justify-center mx-auto mb-4">
+            <i class="ri-star-line ri-2x text-primary"></i>
+          </div>
+          <h3 class="text-xl font-bold text-gray-800 mb-2">Excellence</h3>
+          <p class="text-gray-600">We strive for the highest quality in every service we provide.</p>
+        </div>
+        <div class="bg-white p-6 rounded-lg shadow-md text-center">
+          <div class="w-16 h-16 bg-primary bg-opacity-10 rounded-full flex items-center justify-center mx-auto mb-4">
+            <i class="ri-team-line ri-2x text-primary"></i>
+          </div>
+          <h3 class="text-xl font-bold text-gray-800 mb-2">Teamwork</h3>
+          <p class="text-gray-600">We work together to deliver the best possible results for our customers.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="py-16 bg-primary text-white">
+    <div class="container mx-auto px-6 text-center">
+      <h2 class="text-3xl font-bold mb-4">Join Our Team</h2>
+      <p class="text-lg mb-8 max-w-2xl mx-auto">
+        We're always looking for talented individuals to join our growing team. 
+        Check out our current openings and start your career with FlowMaster Plumbing.
+      </p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a href="./openings.html" class="bg-white text-primary px-8 py-3 !rounded-button font-medium hover:bg-opacity-90 transition-colors">
+          View Openings
+        </a>
+        <a href="index.html#contact" class="border-2 border-white text-white px-8 py-3 !rounded-button font-medium hover:bg-white hover:text-primary transition-colors">
+          Contact Us
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-primary text-white py-12">
+    <div class="container mx-auto px-6">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <!-- Company Info -->
+        <div>
+          <a href="index.html" class="text-white font-['Pacifico'] text-3xl block mb-4">logo</a>
+          <p class="text-gray-300 mb-4">
+            Professional plumbing services for residential and commercial properties. Available 24/7 for all your plumbing needs.
+          </p>
+          <div class="flex space-x-4">
+            <a href="#" class="w-10 h-10 bg-white bg-opacity-20 rounded-full flex items-center justify-center hover:bg-opacity-30 transition-colors">
+              <i class="ri-facebook-fill text-white"></i>
+            </a>
+            <a href="#" class="w-10 h-10 bg-white bg-opacity-20 rounded-full flex items-center justify-center hover:bg-opacity-30 transition-colors">
+              <i class="ri-twitter-x-fill text-white"></i>
+            </a>
+            <a href="#" class="w-10 h-10 bg-white bg-opacity-20 rounded-full flex items-center justify-center hover:bg-opacity-30 transition-colors">
+              <i class="ri-instagram-fill text-white"></i>
+            </a>
+            <a href="#" class="w-10 h-10 bg-white bg-opacity-20 rounded-full flex items-center justify-center hover:bg-opacity-30 transition-colors">
+              <i class="ri-linkedin-fill text-white"></i>
+            </a>
+          </div>
+        </div>
+        <!-- Quick Links -->
+        <div>
+          <h4 class="text-xl font-bold mb-6">Quick Links</h4>
+          <ul class="space-y-3">
+            <li><a href="index.html" class="text-gray-300 hover:text-white transition-colors">Home</a></li>
+            <li><a href="service.html" class="text-gray-300 hover:text-white transition-colors">Services</a></li>
+            <li><a href="about.html" class="text-gray-300 hover:text-white transition-colors">About Us</a></li>
+            <li><a href="index.html#contact" class="text-gray-300 hover:text-white transition-colors">Contact</a></li>
+          </ul>
+        </div>
+        <!-- Contact Info -->
+        <div>
+          <h4 class="text-xl font-bold mb-6">Contact Us</h4>
+          <ul class="space-y-3">
+            <li class="flex items-center">
+              <i class="ri-map-pin-line mr-3"></i>
+              <span class="text-gray-300">1234 Plumbing Way, Watertown, CA 90210</span>
+            </li>
+            <li class="flex items-center">
+              <i class="ri-phone-line mr-3"></i>
+              <span class="text-gray-300">(555) 123-4567</span>
+            </li>
+            <li class="flex items-center">
+              <i class="ri-mail-line mr-3"></i>
+              <span class="text-gray-300">info@flowmasterplumbing.com</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="border-t border-gray-700 mt-10 pt-6 text-center">
+        <p class="text-gray-400">© 2025 FlowMaster Plumbing. All rights reserved. Licensed and Insured.</p>
+      </div>
+    </div>
+  </footer>
+</body>
+
+</html> 

@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Career Opportunities | FlowMaster Plumbing</title>
+  <script src="./assets/js/tailwind.js"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: { primary: "#1E3D59", secondary: "#17A2B8" },
+          borderRadius: {
+            none: "0px",
+            sm: "4px",
+            DEFAULT: "8px",
+            md: "12px",
+            lg: "16px",
+            xl: "20px",
+            "2xl": "24px",
+            "3xl": "32px",
+            full: "9999px",
+            button: "8px",
+          },
+        },
+      },
+    };
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Open+Sans:wght@400;500;600&family=Pacifico&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css" />
+  <style>
+    :where([class^="ri-"])::before {
+      content: "\f3c2";
+    }
+
+    body {
+      font-family: "Open Sans", sans-serif;
+      color: #333;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      font-family: "Montserrat", sans-serif;
+    }
+
+    html {
+      scroll-padding-top: 60px;
+    }
+
+    section {
+      scroll-margin-top: 60px;
+    }
+
+    .job-card {
+      transition: transform 0.3s ease;
+    }
+
+    .job-card:hover {
+      transform: translateY(-5px);
+    }
+  </style>
+</head>
+
+<body class="bg-white">
+  <!-- Header Section -->
+  <header class="w-full bg-white shadow-sm fixed top-0 left-0 z-50 h-20">
+    <div class="container mx-auto px-6 h-full flex items-center justify-between">
+      <a href="index.html" class="text-primary font-['Pacifico'] text-3xl">logo</a>
+      <nav class="hidden md:flex items-center space-x-8">
+        <a href="service.html" class="text-gray-700 hover:text-primary font-medium transition-colors">Services</a>
+        <a href="index.html#gallery" class="text-gray-700 hover:text-primary font-medium transition-colors">Gallery</a>
+        <a href="about.html" class="text-gray-700 hover:text-primary font-medium transition-colors">About</a>
+        <a href="index.html#contact" class="text-gray-700 hover:text-primary font-medium transition-colors">Contact</a>
+        <a href="./bookservice.html"
+          class="bg-primary text-white px-6 py-2.5 !rounded-button font-medium hover:bg-opacity-90 transition-colors whitespace-nowrap">
+          Book Service
+        </a>
+      </nav>
+      <button class="md:hidden w-10 h-10 flex items-center justify-center text-gray-700">
+        <i class="ri-menu-line ri-lg"></i>
+      </button>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="w-full min-h-[400px] pt-32 pb-16 bg-gray-50">
+    <div class="container mx-auto px-6">
+      <div class="max-w-3xl">
+        <h1 class="text-4xl md:text-5xl font-bold text-primary leading-tight mb-4">
+          Join Our Team
+        </h1>
+        <p class="text-lg text-gray-700">
+          Build your career with FlowMaster Plumbing. We're looking for talented individuals who share our commitment to excellence and customer service.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Benefits Section -->
+  <section class="py-16">
+    <div class="container mx-auto px-6">
+      <div class="text-center mb-12">
+        <h2 class="text-3xl font-bold text-primary mb-4">Why Work With Us</h2>
+        <p class="text-gray-600 max-w-2xl mx-auto">
+          We offer competitive benefits and a supportive work environment that helps you grow professionally.
+        </p>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div class="bg-white p-6 rounded-lg shadow-md text-center">
+          <div class="w-16 h-16 bg-primary bg-opacity-10 rounded-full flex items-center justify-center mx-auto mb-4">
+            <i class="ri-heart-pulse-line ri-2x text-primary"></i>
+          </div>
+          <h3 class="text-xl font-bold text-gray-800 mb-2">Health & Wellness</h3>
+          <p class="text-gray-600">Comprehensive health insurance, dental coverage, and wellness programs.</p>
+        </div>
+        <div class="bg-white p-6 rounded-lg shadow-md text-center">
+          <div class="w-16 h-16 bg-primary bg-opacity-10 rounded-full flex items-center justify-center mx-auto mb-4">
+            <i class="ri-money-dollar-circle-line ri-2x text-primary"></i>
+          </div>
+          <h3 class="text-xl font-bold text-gray-800 mb-2">Competitive Pay</h3>
+          <p class="text-gray-600">Attractive salary packages with performance bonuses and overtime opportunities.</p>
+        </div>
+        <div class="bg-white p-6 rounded-lg shadow-md text-center">
+          <div class="w-16 h-16 bg-primary bg-opacity-10 rounded-full flex items-center justify-center mx-auto mb-4">
+            <i class="ri-graduation-cap-line ri-2x text-primary"></i>
+          </div>
+          <h3 class="text-xl font-bold text-gray-800 mb-2">Growth Opportunities</h3>
+          <p class="text-gray-600">Continuous training and career development programs to advance your skills.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Current Openings Section -->
+  <section class="py-16 bg-gray-50">
+    <div class="container mx-auto px-6">
+      <div class="text-center mb-12">
+        <h2 class="text-3xl font-bold text-primary mb-4">Current Openings</h2>
+        <p class="text-gray-600 max-w-2xl mx-auto">
+          Explore our available positions and find the perfect role for your skills and career goals.
+        </p>
+      </div>
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+        <!-- Job 1 -->
+        <div class="job-card bg-white p-8 rounded-lg shadow-md">
+          <h3 class="text-2xl font-bold text-gray-800 mb-2">Licensed Plumber</h3>
+          <div class="flex items-center text-gray-600 mb-4">
+            <i class="ri-map-pin-line mr-2"></i>
+            <span>Watertown, CA</span>
+            <span class="mx-2">•</span>
+            <i class="ri-time-line mr-2"></i>
+            <span>Full-time</span>
+          </div>
+          <p class="text-gray-600 mb-4">
+            We're seeking experienced licensed plumbers to join our team. You'll handle residential and commercial plumbing projects, ensuring high-quality work and customer satisfaction.
+          </p>
+          <div class="mb-6">
+            <h4 class="font-semibold text-gray-800 mb-2">Requirements:</h4>
+            <ul class="space-y-2 text-gray-600">
+              <li class="flex items-start">
+                <i class="ri-check-line text-secondary mt-1 mr-2"></i>
+                <span>Valid plumbing license</span>
+              </li>
+              <li class="flex items-start">
+                <i class="ri-check-line text-secondary mt-1 mr-2"></i>
+                <span>3+ years of experience</span>
+              </li>
+              <li class="flex items-start">
+                <i class="ri-check-line text-secondary mt-1 mr-2"></i>
+                <span>Strong problem-solving skills</span>
+              </li>
+            </ul>
+          </div>
+          <a href="" class="inline-block bg-primary text-white px-6 py-3 !rounded-button font-medium hover:bg-opacity-90 transition-colors">
+            Apply Now
+          </a>
+        </div>
+
+        <!-- Job 2 -->
+        <div class="job-card bg-white p-8 rounded-lg shadow-md">
+          <h3 class="text-2xl font-bold text-gray-800 mb-2">Plumbing Apprentice</h3>
+          <div class="flex items-center text-gray-600 mb-4">
+            <i class="ri-map-pin-line mr-2"></i>
+            <span>Watertown, CA</span>
+            <span class="mx-2">•</span>
+            <i class="ri-time-line mr-2"></i>
+            <span>Full-time</span>
+          </div>
+          <p class="text-gray-600 mb-4">
+            Start your plumbing career with us! We're looking for motivated individuals to join our apprenticeship program and learn from experienced professionals.
+          </p>
+          <div class="mb-6">
+            <h4 class="font-semibold text-gray-800 mb-2">Requirements:</h4>
+            <ul class="space-y-2 text-gray-600">
+              <li class="flex items-start">
+                <i class="ri-check-line text-secondary mt-1 mr-2"></i>
+                <span>High school diploma or equivalent</span>
+              </li>
+              <li class="flex items-start">
+                <i class="ri-check-line text-secondary mt-1 mr-2"></i>
+                <span>Basic tools knowledge</span>
+              </li>
+              <li class="flex items-start">
+                <i class="ri-check-line text-secondary mt-1 mr-2"></i>
+                <span>Willingness to learn</span>
+              </li>
+            </ul>
+          </div>
+          <a href="" class="inline-block bg-primary text-white px-6 py-3 !rounded-button font-medium hover:bg-opacity-90 transition-colors">
+            Apply Now
+          </a>
+        </div>
+
+        <!-- Job 3 -->
+        <div class="job-card bg-white p-8 rounded-lg shadow-md">
+          <h3 class="text-2xl font-bold text-gray-800 mb-2">Customer Service Representative</h3>
+          <div class="flex items-center text-gray-600 mb-4">
+            <i class="ri-map-pin-line mr-2"></i>
+            <span>Watertown, CA</span>
+            <span class="mx-2">•</span>
+            <i class="ri-time-line mr-2"></i>
+            <span>Full-time</span>
+          </div>
+          <p class="text-gray-600 mb-4">
+            Join our customer service team to help provide exceptional support to our clients and coordinate service appointments.
+          </p>
+          <div class="mb-6">
+            <h4 class="font-semibold text-gray-800 mb-2">Requirements:</h4>
+            <ul class="space-y-2 text-gray-600">
+              <li class="flex items-start">
+                <i class="ri-check-line text-secondary mt-1 mr-2"></i>
+                <span>2+ years customer service experience</span>
+              </li>
+              <li class="flex items-start">
+                <i class="ri-check-line text-secondary mt-1 mr-2"></i>
+                <span>Strong communication skills</span>
+              </li>
+              <li class="flex items-start">
+                <i class="ri-check-line text-secondary mt-1 mr-2"></i>
+                <span>Proficiency with scheduling software</span>
+              </li>
+            </ul>
+          </div>
+          <a href="" class="inline-block bg-primary text-white px-6 py-3 !rounded-button font-medium hover:bg-opacity-90 transition-colors">
+            Apply Now
+          </a>
+        </div>
+
+        <!-- Job 4 -->
+        <div class="job-card bg-white p-8 rounded-lg shadow-md">
+          <h3 class="text-2xl font-bold text-gray-800 mb-2">Service Coordinator</h3>
+          <div class="flex items-center text-gray-600 mb-4">
+            <i class="ri-map-pin-line mr-2"></i>
+            <span>Watertown, CA</span>
+            <span class="mx-2">•</span>
+            <i class="ri-time-line mr-2"></i>
+            <span>Full-time</span>
+          </div>
+          <p class="text-gray-600 mb-4">
+            Coordinate and manage service operations, ensuring efficient scheduling and resource allocation for our plumbing team.
+          </p>
+          <div class="mb-6">
+            <h4 class="font-semibold text-gray-800 mb-2">Requirements:</h4>
+            <ul class="space-y-2 text-gray-600">
+              <li class="flex items-start">
+                <i class="ri-check-line text-secondary mt-1 mr-2"></i>
+                <span>3+ years operations experience</span>
+              </li>
+              <li class="flex items-start">
+                <i class="ri-check-line text-secondary mt-1 mr-2"></i>
+                <span>Strong organizational skills</span>
+              </li>
+              <li class="flex items-start">
+                <i class="ri-check-line text-secondary mt-1 mr-2"></i>
+                <span>Experience with service management software</span>
+              </li>
+            </ul>
+          </div>
+          <a href="" class="inline-block bg-primary text-white px-6 py-3 !rounded-button font-medium hover:bg-opacity-90 transition-colors">
+            Apply Now
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Application Process Section -->
+  <section class="py-16">
+    <div class="container mx-auto px-6">
+      <div class="text-center mb-12">
+        <h2 class="text-3xl font-bold text-primary mb-4">Application Process</h2>
+        <p class="text-gray-600 max-w-2xl mx-auto">
+          Here's what you can expect when applying for a position with FlowMaster Plumbing.
+        </p>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+        <div class="text-center">
+          <div class="w-16 h-16 bg-primary bg-opacity-10 rounded-full flex items-center justify-center mx-auto mb-4">
+            <span class="text-2xl font-bold text-primary">1</span>
+          </div>
+          <h3 class="text-xl font-bold text-gray-800 mb-2">Submit Application</h3>
+          <p class="text-gray-600">Fill out our online application form with your details and experience.</p>
+        </div>
+        <div class="text-center">
+          <div class="w-16 h-16 bg-primary bg-opacity-10 rounded-full flex items-center justify-center mx-auto mb-4">
+            <span class="text-2xl font-bold text-primary">2</span>
+          </div>
+          <h3 class="text-xl font-bold text-gray-800 mb-2">Initial Review</h3>
+          <p class="text-gray-600">Our team reviews your application and qualifications.</p>
+        </div>
+        <div class="text-center">
+          <div class="w-16 h-16 bg-primary bg-opacity-10 rounded-full flex items-center justify-center mx-auto mb-4">
+            <span class="text-2xl font-bold text-primary">3</span>
+          </div>
+          <h3 class="text-xl font-bold text-gray-800 mb-2">Interview</h3>
+          <p class="text-gray-600">Meet with our team to discuss the position and your experience.</p>
+        </div>
+        <div class="text-center">
+          <div class="w-16 h-16 bg-primary bg-opacity-10 rounded-full flex items-center justify-center mx-auto mb-4">
+            <span class="text-2xl font-bold text-primary">4</span>
+          </div>
+          <h3 class="text-xl font-bold text-gray-800 mb-2">Onboarding</h3>
+          <p class="text-gray-600">Complete the hiring process and join our team.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="py-16 bg-primary text-white">
+    <div class="container mx-auto px-6 text-center">
+      <h2 class="text-3xl font-bold mb-4">Ready to Join Our Team?</h2>
+      <p class="text-lg mb-8 max-w-2xl mx-auto">
+        Don't see a position that matches your skills? We're always looking for talented individuals. Send us your resume and we'll keep you in mind for future opportunities.
+      </p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a href="index.html#contact" class="bg-white text-primary px-8 py-3 !rounded-button font-medium hover:bg-opacity-90 transition-colors">
+          Contact Us
+        </a>
+        <button class="border-2 border-white text-white px-8 py-3 !rounded-button font-medium hover:bg-white hover:text-primary transition-colors">
+          Submit Resume
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-primary text-white py-12">
+    <div class="container mx-auto px-6">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <!-- Company Info -->
+        <div>
+          <a href="index.html" class="text-white font-['Pacifico'] text-3xl block mb-4">logo</a>
+          <p class="text-gray-300 mb-4">
+            Professional plumbing services for residential and commercial properties. Available 24/7 for all your plumbing needs.
+          </p>
+          <div class="flex space-x-4">
+            <a href="#" class="w-10 h-10 bg-white bg-opacity-20 rounded-full flex items-center justify-center hover:bg-opacity-30 transition-colors">
+              <i class="ri-facebook-fill text-white"></i>
+            </a>
+            <a href="#" class="w-10 h-10 bg-white bg-opacity-20 rounded-full flex items-center justify-center hover:bg-opacity-30 transition-colors">
+              <i class="ri-twitter-x-fill text-white"></i>
+            </a>
+            <a href="#" class="w-10 h-10 bg-white bg-opacity-20 rounded-full flex items-center justify-center hover:bg-opacity-30 transition-colors">
+              <i class="ri-instagram-fill text-white"></i>
+            </a>
+            <a href="#" class="w-10 h-10 bg-white bg-opacity-20 rounded-full flex items-center justify-center hover:bg-opacity-30 transition-colors">
+              <i class="ri-linkedin-fill text-white"></i>
+            </a>
+          </div>
+        </div>
+        <!-- Quick Links -->
+        <div>
+          <h4 class="text-xl font-bold mb-6">Quick Links</h4>
+          <ul class="space-y-3">
+            <li><a href="index.html" class="text-gray-300 hover:text-white transition-colors">Home</a></li>
+            <li><a href="service.html" class="text-gray-300 hover:text-white transition-colors">Services</a></li>
+            <li><a href="about.html" class="text-gray-300 hover:text-white transition-colors">About Us</a></li>
+            <li><a href="index.html#contact" class="text-gray-300 hover:text-white transition-colors">Contact</a></li>
+          </ul>
+        </div>
+        <!-- Contact Info -->
+        <div>
+          <h4 class="text-xl font-bold mb-6">Contact Us</h4>
+          <ul class="space-y-3">
+            <li class="flex items-center">
+              <i class="ri-map-pin-line mr-3"></i>
+              <span class="text-gray-300">1234 Plumbing Way, Watertown, CA 90210</span>
+            </li>
+            <li class="flex items-center">
+              <i class="ri-phone-line mr-3"></i>
+              <span class="text-gray-300">(555) 123-4567</span>
+            </li>
+            <li class="flex items-center">
+              <i class="ri-mail-line mr-3"></i>
+              <span class="text-gray-300">info@flowmasterplumbing.com</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="border-t border-gray-700 mt-10 pt-6 text-center">
+        <p class="text-gray-400">© 2025 FlowMaster Plumbing. All rights reserved. Licensed and Insured.</p>
+      </div>
+    </div>
+  </footer>
+</body>
+
+</html> 

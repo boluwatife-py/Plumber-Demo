@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Our Services | FlowMaster Plumbing</title>
+  <script src="./assets/js/tailwind.js"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: { primary: "#1E3D59", secondary: "#17A2B8" },
+          borderRadius: {
+            none: "0px",
+            sm: "4px",
+            DEFAULT: "8px",
+            md: "12px",
+            lg: "16px",
+            xl: "20px",
+            "2xl": "24px",
+            "3xl": "32px",
+            full: "9999px",
+            button: "8px",
+          },
+        },
+      },
+    };
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Open+Sans:wght@400;500;600&family=Pacifico&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css" />
+  <style>
+    :where([class^="ri-"])::before {
+      content: "\f3c2";
+    }
+
+    body {
+      font-family: "Open Sans", sans-serif;
+      color: #333;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      font-family: "Montserrat", sans-serif;
+    }
+
+    html {
+      scroll-padding-top: 60px;
+    }
+
+    section {
+      scroll-margin-top: 60px;
+    }
+  </style>
+</head>
+
+<body class="bg-white">
+  <!-- Header Section -->
+  <header class="w-full bg-white shadow-sm fixed top-0 left-0 z-50 h-20">
+    <div class="container mx-auto px-6 h-full flex items-center justify-between">
+      <a href="index.html" class="text-primary font-['Pacifico'] text-3xl">logo</a>
+      <nav class="hidden md:flex items-center space-x-8">
+        <a href="" class="text-gray-700 hover:text-primary font-medium transition-colors">Services</a>
+        <a href="index.html#gallery" class="text-gray-700 hover:text-primary font-medium transition-colors">Gallery</a>
+        <a href="./about.html" class="text-gray-700 hover:text-primary font-medium transition-colors">About</a>
+        <a href="index.html#contact" class="text-gray-700 hover:text-primary font-medium transition-colors">Contact</a>
+        <a href="./bookservice.html"
+          class="bg-primary text-white px-6 py-2.5 !rounded-button font-medium hover:bg-opacity-90 transition-colors whitespace-nowrap">
+          Book Service
+        </a>
+      </nav>
+      <button class="md:hidden w-10 h-10 flex items-center justify-center text-gray-700">
+        <i class="ri-menu-line ri-lg"></i>
+      </button>
+    </div>
+  </header>
+
+  <!-- Service Hero Section -->
+  <section class="w-full min-h-[400px] pt-32 pb-16 bg-gray-50">
+    <div class="container mx-auto px-6">
+      <div class="max-w-3xl">
+        <h1 class="text-4xl md:text-5xl font-bold text-primary leading-tight mb-4">
+          Our Professional Plumbing Services
+        </h1>
+        <p class="text-lg text-gray-700">
+          Comprehensive plumbing solutions for residential and commercial properties. 
+          Our expert team is available 24/7 to handle all your plumbing needs.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Detailed Services Section -->
+  <section class="py-16">
+    <div class="container mx-auto px-6">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+        <!-- Service 1 -->
+        <div class="bg-white p-8 rounded-lg shadow-md">
+          <div class="w-16 h-16 bg-primary bg-opacity-10 rounded-full flex items-center justify-center mb-6">
+            <i class="ri-drop-line ri-2x text-primary"></i>
+          </div>
+          <h2 class="text-2xl font-bold text-gray-800 mb-4">Leak Detection & Repair</h2>
+          <p class="text-gray-600 mb-6">
+            Our advanced leak detection technology helps us identify and fix hidden leaks before they cause significant damage. We use state-of-the-art equipment to:
+          </p>
+          <ul class="space-y-3 mb-6">
+            <li class="flex items-start">
+              <i class="ri-check-line text-secondary mt-1 mr-2"></i>
+              <span>Locate hidden leaks without unnecessary damage</span>
+            </li>
+            <li class="flex items-start">
+              <i class="ri-check-line text-secondary mt-1 mr-2"></i>
+              <span>Provide precise leak detection in walls and underground</span>
+            </li>
+            <li class="flex items-start">
+              <i class="ri-check-line text-secondary mt-1 mr-2"></i>
+              <span>Implement efficient repair solutions</span>
+            </li>
+          </ul>
+          <button class="bg-primary text-white px-6 py-3 !rounded-button font-medium hover:bg-opacity-90 transition-colors">
+            Schedule Service
+          </button>
+        </div>
+
+        <!-- Service 2 -->
+        <div class="bg-white p-8 rounded-lg shadow-md">
+          <div class="w-16 h-16 bg-primary bg-opacity-10 rounded-full flex items-center justify-center mb-6">
+            <i class="ri-tools-line ri-2x text-primary"></i>
+          </div>
+          <h2 class="text-2xl font-bold text-gray-800 mb-4">Drain Cleaning</h2>
+          <p class="text-gray-600 mb-6">
+            Professional drain cleaning services to keep your plumbing system flowing smoothly. Our comprehensive approach includes:
+          </p>
+          <ul class="space-y-3 mb-6">
+            <li class="flex items-start">
+              <i class="ri-check-line text-secondary mt-1 mr-2"></i>
+              <span>Hydro-jetting for thorough cleaning</span>
+            </li>
+            <li class="flex items-start">
+              <i class="ri-check-line text-secondary mt-1 mr-2"></i>
+              <span>Snake and auger services for tough clogs</span>
+            </li>
+            <li class="flex items-start">
+              <i class="ri-check-line text-secondary mt-1 mr-2"></i>
+              <span>Preventive maintenance programs</span>
+            </li>
+          </ul>
+          <button class="bg-primary text-white px-6 py-3 !rounded-button font-medium hover:bg-opacity-90 transition-colors">
+            Schedule Service
+          </button>
+        </div>
+
+        <!-- Service 3 -->
+        <div class="bg-white p-8 rounded-lg shadow-md">
+          <div class="w-16 h-16 bg-primary bg-opacity-10 rounded-full flex items-center justify-center mb-6">
+            <i class="ri-home-gear-line ri-2x text-primary"></i>
+          </div>
+          <h2 class="text-2xl font-bold text-gray-800 mb-4">Water Heater Services</h2>
+          <p class="text-gray-600 mb-6">
+            Complete water heater solutions for optimal performance and efficiency. Our services include:
+          </p>
+          <ul class="space-y-3 mb-6">
+            <li class="flex items-start">
+              <i class="ri-check-line text-secondary mt-1 mr-2"></i>
+              <span>Installation of new water heaters</span>
+            </li>
+            <li class="flex items-start">
+              <i class="ri-check-line text-secondary mt-1 mr-2"></i>
+              <span>Repair and maintenance services</span>
+            </li>
+            <li class="flex items-start">
+              <i class="ri-check-line text-secondary mt-1 mr-2"></i>
+              <span>Energy-efficient upgrades</span>
+            </li>
+          </ul>
+          <button class="bg-primary text-white px-6 py-3 !rounded-button font-medium hover:bg-opacity-90 transition-colors">
+            Schedule Service
+          </button>
+        </div>
+
+        <!-- Service 4 -->
+        <div class="bg-white p-8 rounded-lg shadow-md">
+          <div class="w-16 h-16 bg-primary bg-opacity-10 rounded-full flex items-center justify-center mb-6">
+            <i class="ri-install-line ri-2x text-primary"></i>
+          </div>
+          <h2 class="text-2xl font-bold text-gray-800 mb-4">Fixture Installation</h2>
+          <p class="text-gray-600 mb-6">
+            Expert installation of all types of plumbing fixtures. We handle:
+          </p>
+          <ul class="space-y-3 mb-6">
+            <li class="flex items-start">
+              <i class="ri-check-line text-secondary mt-1 mr-2"></i>
+              <span>Bathroom and kitchen fixtures</span>
+            </li>
+            <li class="flex items-start">
+              <i class="ri-check-line text-secondary mt-1 mr-2"></i>
+              <span>Commercial plumbing installations</span>
+            </li>
+            <li class="flex items-start">
+              <i class="ri-check-line text-secondary mt-1 mr-2"></i>
+              <span>Custom fixture solutions</span>
+            </li>
+          </ul>
+          <button class="bg-primary text-white px-6 py-3 !rounded-button font-medium hover:bg-opacity-90 transition-colors">
+            Schedule Service
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why Choose Us Section -->
+  <section class="py-16 bg-gray-50">
+    <div class="container mx-auto px-6">
+      <div class="text-center mb-12">
+        <h2 class="text-3xl font-bold text-primary mb-4">Why Choose Our Services</h2>
+        <p class="text-gray-600 max-w-2xl mx-auto">
+          We pride ourselves on delivering exceptional plumbing services with unmatched quality and reliability.
+        </p>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div class="bg-white p-6 rounded-lg shadow-md text-center">
+          <div class="w-16 h-16 bg-primary bg-opacity-10 rounded-full flex items-center justify-center mx-auto mb-4">
+            <i class="ri-medal-line ri-2x text-primary"></i>
+          </div>
+          <h3 class="text-xl font-bold text-gray-800 mb-2">Licensed Professionals</h3>
+          <p class="text-gray-600">Our team consists of fully licensed and insured plumbing experts.</p>
+        </div>
+        <div class="bg-white p-6 rounded-lg shadow-md text-center">
+          <div class="w-16 h-16 bg-primary bg-opacity-10 rounded-full flex items-center justify-center mx-auto mb-4">
+            <i class="ri-timer-line ri-2x text-primary"></i>
+          </div>
+          <h3 class="text-xl font-bold text-gray-800 mb-2">24/7 Availability</h3>
+          <p class="text-gray-600">Emergency services available around the clock for urgent situations.</p>
+        </div>
+        <div class="bg-white p-6 rounded-lg shadow-md text-center">
+          <div class="w-16 h-16 bg-primary bg-opacity-10 rounded-full flex items-center justify-center mx-auto mb-4">
+            <i class="ri-price-tag-3-line ri-2x text-primary"></i>
+          </div>
+          <h3 class="text-xl font-bold text-gray-800 mb-2">Fair Pricing</h3>
+          <p class="text-gray-600">Transparent pricing with no hidden fees or surprises.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="py-16 bg-primary text-white">
+    <div class="container mx-auto px-6 text-center">
+      <h2 class="text-3xl font-bold mb-4">Ready to Get Started?</h2>
+      <p class="text-lg mb-8 max-w-2xl mx-auto">
+        Contact us today for a free consultation and estimate for your plumbing needs.
+      </p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a href="index.html#contact" class="bg-white text-primary px-8 py-3 !rounded-button font-medium hover:bg-opacity-90 transition-colors">
+          Contact Us
+        </a>
+        <a href="./bookservice.html" class="border-2 border-white text-white px-8 py-3 !rounded-button font-medium hover:bg-white hover:text-primary transition-colors">
+          Book Service
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-primary text-white py-12">
+    <div class="container mx-auto px-6">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <!-- Company Info -->
+        <div>
+          <a href="index.html" class="text-white font-['Pacifico'] text-3xl block mb-4">logo</a>
+          <p class="text-gray-300 mb-4">
+            Professional plumbing services for residential and commercial properties. Available 24/7 for all your plumbing needs.
+          </p>
+          <div class="flex space-x-4">
+            <a href="#" class="w-10 h-10 bg-white bg-opacity-20 rounded-full flex items-center justify-center hover:bg-opacity-30 transition-colors">
+              <i class="ri-facebook-fill text-white"></i>
+            </a>
+            <a href="#" class="w-10 h-10 bg-white bg-opacity-20 rounded-full flex items-center justify-center hover:bg-opacity-30 transition-colors">
+              <i class="ri-twitter-x-fill text-white"></i>
+            </a>
+            <a href="#" class="w-10 h-10 bg-white bg-opacity-20 rounded-full flex items-center justify-center hover:bg-opacity-30 transition-colors">
+              <i class="ri-instagram-fill text-white"></i>
+            </a>
+            <a href="#" class="w-10 h-10 bg-white bg-opacity-20 rounded-full flex items-center justify-center hover:bg-opacity-30 transition-colors">
+              <i class="ri-linkedin-fill text-white"></i>
+            </a>
+          </div>
+        </div>
+        <!-- Quick Links -->
+        <div>
+          <h4 class="text-xl font-bold mb-6">Quick Links</h4>
+          <ul class="space-y-3">
+            <li><a href="index.html" class="text-gray-300 hover:text-white transition-colors">Home</a></li>
+            <li><a href="index.html#services" class="text-gray-300 hover:text-white transition-colors">Services</a></li>
+            <li><a href="index.html#about" class="text-gray-300 hover:text-white transition-colors">About Us</a></li>
+            <li><a href="index.html#contact" class="text-gray-300 hover:text-white transition-colors">Contact</a></li>
+          </ul>
+        </div>
+        <!-- Contact Info -->
+        <div>
+          <h4 class="text-xl font-bold mb-6">Contact Us</h4>
+          <ul class="space-y-3">
+            <li class="flex items-center">
+              <i class="ri-map-pin-line mr-3"></i>
+              <span class="text-gray-300">1234 Plumbing Way, Watertown, CA 90210</span>
+            </li>
+            <li class="flex items-center">
+              <i class="ri-phone-line mr-3"></i>
+              <span class="text-gray-300">(555) 123-4567</span>
+            </li>
+            <li class="flex items-center">
+              <i class="ri-mail-line mr-3"></i>
+              <span class="text-gray-300">info@flowmasterplumbing.com</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="border-t border-gray-700 mt-10 pt-6 text-center">
+        <p class="text-gray-400">© 2025 FlowMaster Plumbing. All rights reserved. Licensed and Insured.</p>
+      </div>
+    </div>
+  </footer>
+</body>
+
+</html> 
