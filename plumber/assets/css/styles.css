@@ -1,0 +1,63 @@
+/* Update mobile menu styles */
+      .mobile-menu {
+        transform: translateY(-100%);
+        height: auto;
+        max-height: 85vh;
+        overflow-y: auto;
+        box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
+          0 2px 4px -1px rgba(0, 0, 0, 0.06);
+        border-radius: 0 0 1rem 1rem;
+      }
+
+      .mobile-menu.active {
+        transform: translateY(0);
+      }
+
+      /* Update toggle button styles */
+      .mobile-menu-toggle {
+        position: relative;
+        z-index: 50;
+      }
+
+      .mobile-menu-toggle i {
+        transition: transform 0.3s ease;
+      }
+
+      .mobile-menu-toggle.active i.ri-menu-line {
+        transform: rotate(90deg);
+        opacity: 0;
+      }
+
+      .mobile-menu-toggle i.ri-close-line {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%) rotate(-90deg);
+        opacity: 0;
+      }
+
+      .mobile-menu-toggle.active i.ri-close-line {
+        transform: translate(-50%, -50%) rotate(0);
+        opacity: 1;
+      }
+
+      /* Add backdrop when menu is open */
+      .mobile-menu-backdrop {
+        position: fixed;
+        inset: 0;
+        background: rgba(0, 0, 0, 0.3);
+        opacity: 0;
+        visibility: hidden;
+        transition: all 0.2s ease-in-out;
+        z-index: 39;
+      }
+
+      .mobile-menu-backdrop.active {
+        opacity: 1;
+        visibility: visible;
+      }
+
+      /* Prevent body scroll when mobile menu is open */
+      body.menu-open {
+        overflow: hidden;
+      }
